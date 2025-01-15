@@ -130,5 +130,25 @@ namespace Lab0
 
 
             return result;
-        } }
+        } 
+
+        public static bool GetPrimeNumber(int number )
+        {
+            bool prime = true;
+            for (int i = 2; i < number; i++)
+            {
+                if (number % i == 0)
+                {
+                    prime = false;
+                }
+            }
+            if (prime)
+            {
+                Console.WriteLine(number);
+            }
+            return prime;
+           
+        }
+
+    }
     }

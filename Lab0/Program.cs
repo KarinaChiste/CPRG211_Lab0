@@ -49,3 +49,11 @@ for (int i = numbers.Length - 1; i >= 0; i--)
 }
 streamWriter.Close(); // important to finalize the writing
 Console.WriteLine("File Written");
+
+
+// determine prime numbers
+Console.WriteLine("Prime Numbers: ");
+for (int i = 0; i<= numbers.Length -1; i++)
+{
+    Utilities.GetPrimeNumber(numbers[i]);
+}
