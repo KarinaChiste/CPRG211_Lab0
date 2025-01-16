@@ -57,10 +57,10 @@ namespace Lab0
         /// </summary>
         /// <param name="prompt">name used in error messages</param>
         /// <returns>decimal value read that is >0</returns>
-        public static int GetPositiveInt(string prompt)
+        public static double GetPositiveInt(string prompt)
         {
             bool gotIt = false;
-            int result = 0;
+            double result = 0;
             string input;
 
             while (!gotIt) //while not gotIt (while gotIt is false)
@@ -70,7 +70,7 @@ namespace Lab0
                 // TryParse attempts to parse the string first argument
                 // returns false (instead of crashing) when cannot do
                 //returns true and assigns the second arg variable if successful
-                if (Int32.TryParse(input, out result))  // result is assigned the parsed value
+                if (Double.TryParse(input, out result))  // result is assigned the parsed value
                 {
                     if (result > 0)
                     {
@@ -96,9 +96,9 @@ namespace Lab0
         /// </summary>
         /// <param name="prompt">name used in error messages</param>
         /// <returns>decimal value read that is >0</returns>        
-        public static int GetIntInRange(string prompt, int minValue, int maxValue) {
+        public static double GetIntInRange(string prompt, double minValue, double maxValue) {
             bool gotIt = false;
-            int result = 0;
+            double result = 0;
             string input;
 
             while (!gotIt) //while not gotIt (while gotIt is false)
@@ -108,7 +108,7 @@ namespace Lab0
                 // TryParse attempts to parse the string first argument
                 // returns false (instead of crashing) when cannot do
                 //returns true and assigns the second arg variable if successful
-                if (Int32.TryParse(input, out result))  // result is assigned the parsed value
+                if (Double.TryParse(input, out result))  // result is assigned the parsed value
                 {
                     if (result >= minValue && result <= maxValue)
                     {
@@ -132,7 +132,7 @@ namespace Lab0
             return result;
         } 
 
-        public static bool GetPrimeNumber(int number )
+        public static bool GetPrimeNumber(double number )
         {
             bool prime = true;
             for (int i = 2; i < number; i++)
